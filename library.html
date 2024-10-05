@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<title>Library</title>
+				<link rel="stylesheet" href="style.css">
+</head>
+<body class="main">
+				<div id="header">
+								
+				</div>
+				<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('header');
+    const userData = JSON.parse(localStorage.getItem('user-data'));
+    header.innerHTML = '<h1>Welcome <span class="username">' + userData.username + '</span> to the Library🎉🎉!</h1>';
+  });
+  </script>
+  <div>
+  				<input type="text" class="search"placeholder="Find your favorite book">
+  				<button class="search-button"type="submit"><b style="color: white;">Search</b></button>
+  				
+  				
+  </div>
+  <br> <br>
+  <div class="Books">
+  					<a href="#Geography"><input type="button"value="Geography"></a>
+ 
+  								<a href=""><input type="button"value="Heritage Studies" placehlo></a>
+  										<a href=""><input type="button"value="English Language"></a>
+  							<a href=""><input type="button"value="Physical Education"></a>
+  										<a href=""><input type="button"value="Combined Science"></a>
+  												<a href=""><input type="button"value="Wood and Technology"></a>
+  															<a href=""><input type="button"value="Textile and Design"></a>
+  																	<a href=""><input type="button"value="Mathematics"></a>
+  </div>
+  <div style="background-color:whitesmoke;">
+ 
+  			<h2 style="color:blue;text-align:center;text-decoration:underline;">Latest Books ➡️➡️</h2> 
+  			
+  				<br> <br>
+  				 <div class="latest">
+  				<div class="book">
+  				<img class="img"src="Changamire.jpg" alt="">
+  				
+  		<strong>	  <h4>CHANGAMIRE DOMBO</h4>
+  		<p class="stories">
+  								•Author:Shadreck Moyo <br> <br> 
+  								•Clasic/Fiction
+  				</p> 
+  				</div>
+  				<br> <br> <br>
+  				<div class="book">
+  				
+  				<img class="img"src="changamire.jpg" alt="">
+  				<h4>WAITING FOR THE RAINS</h4>
+  				<p class="stories">
+  								•Author:David Moyo <br> <br>
+  								•Fiction/Comedy
+  								
+  				</p>
+  				</strong>
+  				</div>
+  				<div class="book">
+  				
+  				<img class="img"src="changamire.jpg" alt="">
+  				<h4>WAITING FOR THE RAINS</h4>
+  				<p class="stories">
+  								•Author:David Moyo <br> <br>
+  								•Fiction/Comedy
+  								
+  				</p>
+  				</strong>
+  				</div>
+  				
+  				<div class="book">
+  				
+  				<img class="img"src="changamire.jpg" alt="">
+  				<h4>WAITING FOR THE RAINS</h4>
+  				<p class="stories">
+  								•Author:David Moyo <br> <br>
+  								•Fiction/Comedy
+  								
+  				</p>
+  				</strong>
+  				</div>
+  				<div class="book">
+  				
+  				<img class="img"src="changamire.jpg" alt="">
+  				<h4>WAITING FOR THE RAINS</h4>
+  				<p class="stories">
+  								•Author:David Moyo <br> <br>
+  								•Fiction/Comedy
+  								
+  				</p>
+  				</strong>
+  				</div>
+  				
+  				<div class="book">
+  				
+  				<img class="img"src="changamire.jpg" alt="">
+  				<h4>WAITING FOR THE RAINS</h4>
+  				<p class="stories">
+  								•Author:David Moyo <br> <br>
+  								•Fiction/Comedy
+  								
+  				</p>
+  				</strong>
+  				</div>
+  				<div class="book">
+  				
+  				<img class="img"src="changamire.jpg" alt="">
+  				<h4>WAITING FOR THE RAINS</h4>
+  				<p class="stories">
+  								•Author:David Moyo <br> <br>
+  								•Fiction/Comedy
+  								
+  				</p>
+  				</strong>
+  				</div>
+  				
+  				
+  				
+  				
+  				
+  				
+  </div>
+  <div class="comment-section">
+  <h2 style="color:blue;text-align:center;text-decoration:underline;">Comments</h2>
+  <form id="comment-form">
+  				<div class="namediv">
+    <input type="text"class="name" placeholder="Name" id="name"> </div>
+  
+    
+    <textarea class="comment" placeholder="Comment" id="comment"rows="5"cols="30"></textarea>
+    <br>
+    <div class="submit1">
+    <button id="submit"class="submit">Submit</button>
+    </div>
+  </form>
+  <div id="comments-container">
+    <!-- Comments will be displayed here -->
+  
+
+<script>
+  const commentForm = document.getElementById('comment-form');
+  const commentsContainer = document.getElementById('comments-container');
+
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+
+    if (name && comment) {
+      const commentHTML = `
+        <div class="comment">
+          <h3>${name}</h3>
+          <p>${comment}</p>
+        </div>
+      `;
+
+      commentsContainer.insertAdjacentHTML('beforeend', commentHTML);
+
+      // Clear form fields
+      document.getElementById('name').value = '';
+      document.getElementById('comment').value = '';
+    }
+  });
+</script>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>

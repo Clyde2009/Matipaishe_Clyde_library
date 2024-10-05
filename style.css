@@ -1,0 +1,118 @@
+body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				background-ur
+}
+h1 {
+
+				background-color:darkblue;
+				color: white;
+				 text-align: center;
+}
+form{
+				padding:10%;
+				border:2px solid green;
+}
+input{
+				width:45%;
+				border:2px solid blue;
+				border-radius:10px;
+				padding:16px;
+								margin-bottom: 20px;
+								
+}
+.button {
+				background-color:Blue;
+				width:100%;
+				padding:15px;
+				color: white;
+
+}
+.footer {
+				text-align:center;
+				color:green;
+}
+.username {
+				color:green;
+				font-weight:bold;
+}
+.main{
+				background: url(boo.jpg)no-repeat;
+				background-size:cover;
+				background-position:center;
+}
+.main img{justify-content:center;
+align-items:center;
+
+}
+a {
+				text-align:center;
+				align-items:center;
+				text-decoration:none;
+				justify-content:center;
+}
+.search {border-radius:20px;
+width:70%;
+border:2px solid green}
+
+.search-button {
+				padding:5px;
+				width:15%;
+				background-color: green;
+				color: blue;
+}
+.Books {
+				display:flexbox;
+				align-content:center;
+				justify-content:center;
+				align-items:center;
+				text-align:center;
+}
+.stories {
+				color:green;
+}
+.latest {
+				border: 5px solid whitesmoke;
+				background: whitesmoke;
+				display:flex;
+		overflow-x:auto;
+		scroll-snap-type:x mandatory;
+	gap:20px;
+				
+}
+.book{
+				
+				flex:0 0 200px;
+	scroll-snap-align:start;
+				
+				
+				
+}
+.img {
+				width:35%;
+}
+h4 {
+				text-decoration:underline;
+}
+.comment-section {
+				border: 3px solid white;
+}
+.comment{ border:1px solid green;
+}
+.name{
+				border:1px solid green;
+				width:50%;
+				text-align:center;
+}
+.submit1 {
+				justify-content:center
+				align-items:center;
+				text-align:center;
+}
+.submit {
+				border:1 px solid green;
+				color:white;
+				background-color:green;
+}
+.namediv {
+				text-align:center;
+}

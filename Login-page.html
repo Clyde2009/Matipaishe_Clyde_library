@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 90%;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .forgot-password {
+            margin-top: 20px;
+            text-align: right;
+            text-decoration: none;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .company-info {
+            margin-top: 40px;
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .signup-link a:hover {
+            color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>Welcome to Matipaishe Clyde </h1>
+        </div>
+        <form action="">
+            <input id="login-username"type="text" placeholder="Username" required>
+            <input id="login-password"type="password" placeholder="Password" required>
+            <button type="submit" id="login-btn">Login</button>
+            <a href="#" class="forgot-password">Forgot your password?</a>
+        </form>
+        <div class="signup-link">
+            <p>Don't have an account? <a href="sign up.html">Sign Up</a></p>
+        </div>
+        <p class="company-info">Matipaishe Clyde</p>
+    
+<script> document.addEventListener('DOMContentLoaded', function() {
+    const loginBtn = document.getElementById('login-btn');
+    loginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const loginUsername = document.getElementById('login-username').value;
+      const loginPassword = document.getElementById('login-password').value;
+      const savedUserData = localStorage.getItem('user-data');
+      if (savedUserData) {
+        const userData = JSON.parse(savedUserData);
+        if (loginUsername === userData.username && loginPassword === userData.password) {
+          alert('Login successful!');
+         
+          window.location.href = ' library.html'; // Redirect to a new page
+        } else {
+          alert('Invalid username or password!');
+        }
+      } else {
+        alert('No user data found!');
+      }
+    }); // <--- Add this closing parenthesis
+  }); // <--- And this one
+</script>
+
+
+
+
+     
+
+     
+    
+    
+        <div class="social-media-buttons">
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </button>
+        </div>
+        <div id="header"></div>
+    </body>
+    <style>
+        :root {
+            --background: #060D23;
+            --linkedin: #0A66C2;
+            --youtube: #e52d27;
+            --x: #0F1419;
+            --white: #FFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  
+        }
+        
+        body {
+            background-color: var(--background);
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        
+        .social-media-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .social-media-button {
+            width: 3rem;
+            height: 3rem;
+            border: none;
+            background-color: transparent;
+            border-radius: 50%;
+            outline: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: grid;
+            place-items: center;
+        }
+        
+        .social-media-button:hover {
+            outline-offset: 3px;
+            transition: all 0.3s;
+        }
+        
+        .social-media-button img {
+            transition: all 0.3s;
+        }
+        
+        .social-media-button:hover img {
+            transform: scale(1.15);
+        }
+        
+        .social-media-button:hover:nth-child(1) {
+            background:  radial-gradient(
+                circle at 30% 107%, #fdf497 0%, 
+                #fdf497 5%, #fd5949 45%,
+                #d6249f 60%,#285AEB 90%
+            ); 
+        }
+        
+        .social-media-button:hover:nth-child(2) {
+            background-color: var(--white);
+        }
+        
+        .social-media-button:hover:nth-child(2) svg {
+            stroke: var(--x);
+        }
+        
+        .social-media-button:hover:nth-child(3) {
+            background-color: var(--youtube);
+        }
+        
+        .social-media-button:hover:nth-child(4) {
+            background-color: var(--linkedin);
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<title>Signup page</title>
+				<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 style=""> Register for Matipaishe Clyde Library</h1>
+  <br>
+  <form id="signup-form"action="login-page.html">
+    <input type="text" id="school-name" placeholder="Name of school" required>
+    <br>
+    <input type="text" id="username" placeholder="Username" required>
+    <br>
+    <input type="password" id="password" placeholder="Password" required">
+    <br>
+    <input type="password" id="confirm-password" placeholder="Confirm Password" required">
+    <br>
+    <select id="form-level" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+      <option>Form 1</option>
+      <option>Form 2</option>
+      <option>Form 3</option>
+      <option>Form 4</option>
+      <option>Form 5</option>
+      <option>Form 6</option>
+    </select>
+    <br>
+    <button id="signup-btn" style="width: 100%; padding: 10px; background-color: darkblue; color: white;">Register Now✅</button>
+    <a href="Login-page.html">Back to login</a>
+  </form>
+
+  <script>
+    const signupBtn = document.getElementById('signup-btn');
+    signupBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const schoolName = document.getElementById('school-name').value;
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const formLevel = document.getElementById('form-level').value;
+if (!schoolName || ! username || !password || !confirmPassword || !formLevel) {alert('Please fill in all required fields!'); return; }
+      if (password === confirmPassword) {
+        const userData = {
+          schoolName,
+          username,
+          password,
+          formLevel
+        };
+        localStorage.setItem('user-data', JSON.stringify(userData));
+        alert('Registered successfully!');
+      } else {
+        alert('Passwords do not match!');
+      }
+    });
+  </script>
+  <div>
+								<p class="footer"> Matipaishe Clyde Library &copy</p>
+				</div>
+</body>
+				
+</html>
